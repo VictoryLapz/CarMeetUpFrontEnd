@@ -1,0 +1,15 @@
+
+<div *ngIf="events.length > 0"></div>
+    <h2>Event List</h2>
+    <ul>
+      <li *ngFor="let event of events">
+        <h3>{{ event.title }}</h3>
+        <p>{{ event.location }}</p>
+        <p>{{ event.date }}</p>
+      </li>
+    </ul>
+
+  
+  <div *ngIf="events.length === 0">
+    <p>No events available.</p>
+  </div>
