@@ -1,4 +1,4 @@
-export interface EventSignup {
+export interface EventSignUp {
 
     id?: number;
     userid?: number;
