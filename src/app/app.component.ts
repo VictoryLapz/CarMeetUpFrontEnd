@@ -12,4 +12,5 @@ import { EventListComponent } from "./components/event-list/event-list.component
 })
 export class AppComponent {
   title = 'The Car Lounge';
+  
 }

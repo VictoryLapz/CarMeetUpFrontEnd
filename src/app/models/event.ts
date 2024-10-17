@@ -1,10 +1,19 @@
+
+import { Car } from "./car";
 export interface Event {
-    eventid?: number;
-    title: string;
-    location: string;
-    date: Date;
-    description: string;
-    organizedid?: number;
-    capacity: number;
-    carid: number;
+
+  eventId: number;
+  title: string;
+  location: string;
+  date: Date;
+  description?: string;
+  organizedId: number;
+  capacity: number;
+  carId: number;
+  carSearch?: Car;
+  createdBy?: string;
+  createdOn?: Date;
+  updatedBy?: string;
+  updatedOn?: Date;
+  
 }
