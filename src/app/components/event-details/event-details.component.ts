@@ -1,20 +1,20 @@
-// import { Component, inject } from '@angular/core';
-// import { EventApiService } from '../../services/event-api.service';
-// import { EventDetails } from '../../models/event-details';
+import { Component, inject } from '@angular/core';
+import { EventApiService } from '../../services/event-api.service';
+import { EventDetails } from '../../models/event-details';
 
-// @Component({
-//   selector: 'app-event-details',
-//   standalone: true,
-//   imports: [],
-//   templateUrl: './event-details.component.html',
-//   styleUrl: './event-details.component.css'
-// })
-// export class EventDetailsComponent {
+@Component({
+  selector: 'app-event-details',
+  standalone: true,
+  imports: [],
+  templateUrl: './event-details.component.html',
+  styleUrl: './event-details.component.css'
+})
+export class EventDetailsComponent {
 
-//   eventDetails:EventDetails | null = null;
+  eventDetails:EventDetails | null = null;
 
-//   eventService = inject(EventApiService);
+  eventService = inject(EventApiService);
 
-//   // ngOnInIt(): { this.loadEvent();
-//   }
+  ngOnInIt(): { this.loadEvent();
+  }
   
