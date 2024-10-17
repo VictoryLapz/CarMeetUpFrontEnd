@@ -27,15 +27,4 @@ export class EventApiService {
     return this.http.put<Event>(`${this.baseURL}/${updatedEvent.eventid}`, updatedEvent);
   };
 
-  
-//   addEvent(newBook: Book): Observable<Book> {
-//     // For POST, pass the body data as a second parameter after the URL
-//     return this.http.post<Book>(`${this.baseURL}`, newBook);
-//   };
-
-//   deleteEvent(id: number): Observable<void> {
-//     return this.http.delete<void>(`${this.baseURL}/${id}`);
-//   };
-
-// }
 }

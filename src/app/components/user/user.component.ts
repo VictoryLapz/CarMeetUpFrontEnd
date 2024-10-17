@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-user',
-  standalone: true,
-  imports: [],
-  templateUrl: './user.component.html',
-  styleUrl: './user.component.css'
+  imports: [CommonModule],
+  selector: 'app-user-profile',
+  template: `
+    <ul *ngIf="auth.user$ | async as user">
+      <li>{{ user.name }}</li>
+      <li>{{ user.email }}</li>
+    </ul>`,
+  standalone: true
 })
-export class UserComponent {
-
+export class UserProfileComponent {
+  constructor(public auth: AuthService) {}
 }
