@@ -1,0 +1,167 @@
+/* This section links the font on the page to all writing to be the same -------------------------- */
+:root {
+  --font-main: 'Roboto', sans-serif; /* Main font for buttons and text */
+}
+
+body {
+  font-family: var(--font-main); /* Apply main font to the body */
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^This section links the font on the page to all writing to be the same */
+
+
+
+/* This section controls the css for the side bar */
+.container {
+  display: flex;
+  height: calc(100vh - 100px); /* Adjust height to account for the fixed navbar */
+  margin-top: 100px; /* Add margin to push content below the fixed navbar */
+}
+
+.sidebar {
+  width: 250px; /* Width of your sidebar */
+  background-color: #121212; /* Background color */
+  padding: 40px; /* Spacing around buttons */
+  padding-top: 30px; /* Add top padding to create space */
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100%; /* Make it full height */
+  border-right: 1px solid rgba(97, 94, 94, 0.5); /* Thin translucent gray bottom border */
+}
+
+/* This section controls the css the "headers" in the side bar */
+
+.sidebar h2 {
+  color: rgba(146, 143, 143, 0.5); ; /* Change to your preferred color */
+  margin: 20px 0; /* Spacing above and below the header */
+  font-size: 20px;
+  font-weight: 100; /* Thinner font weight */
+  border-top: 1px solid rgba(66, 64, 64, 0.5); /* Thin translucent gray bottom border */
+  padding-top: 25px;
+}
+
+/* This section controls the css the "headers" in the side bar */
+
+
+
+.sidebar button {
+  width: 100%; /* Make buttons full width */
+  margin: 10px 0; /* Spacing between buttons */
+  padding: 10px; /* Padding inside buttons */
+  background-color: #121212; /* Button background color */
+  color: rgb(247, 243, 243); /* Text color */
+  font-size: 17px;
+  font-weight: 100; /* Thinner font weight */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Optional rounding */
+  cursor: pointer; /* Pointer cursor on hover */
+
+}
+
+.sidebar button:hover {
+  background-color: #1d1d1f; /* Darken button on hover */
+}
+
+main {
+  flex: 1; /* Take the remaining space */
+  padding: 30px; /* Spacing around main content */
+}
+
+/* Custom scrollbar for the sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 3px; /* Width of the scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #121212; /* Background color of the scrollbar track */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #333333; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the thumb */
+  border: 1px solid rgba(97, 94, 94, 0.5); /* Thin translucent gray bottom border */
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/* This section controls the css for the horizontal top bar */
+
+.top-navbar {
+  position: fixed; /* Make the navbar fixed */
+  top: 0; /* Position it at the top */
+  left: 0; /* Align it with the left edge */
+  width: 100%; /* Full width */
+  background-color: #121212; /* Background color */
+  padding: 0; /* Remove padding */
+  height: 100px; /* Set height for the navbar */
+  justify-content: center; /* Center items horizontally */
+  display: flex; /* Use flex to layout buttons horizontally */
+  align-items: center; /* Center items vertically */
+  border-bottom: 1px solid rgba(97, 94, 94, 0.5);
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.top-navbar ul {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Align items in a row */
+}
+
+.top-navbar li {
+  margin-right: 20px; /* Space between items */
+  position: relative; /* Position for dropdown */
+}
+
+.top-navbar button {
+  margin: 0 10px; /* Adjust margin between buttons */
+  padding: 10px 15px; /* Add vertical and horizontal padding */
+  background-color: #121212; /* Button background color */
+  color: rgb(247, 243, 243); /* Text color */
+  font-size: 17px;
+  font-weight: 100; /* Thinner font weight */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Optional rounding */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.top-navbar button:hover {
+  background-color: #1d1d1f; /* Darken button on hover */
+}
+
+.search-input {
+  padding: 10px; /* Padding for input */
+  margin-left: 20px; /* Space from the last nav item */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Optional rounding */
+  background-color: #1e1e1e; /* Dark background */
+  color: #ffffff; /* Text color */
+}
+
+.search-button {
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.dropdown-menu {
+  position: absolute; /* Position relative to dropdown button */
+  background-color: #121212; /* Dropdown background */
+  border: 1px solid #cccccc; /* Optional border */
+  padding: 10px 0; /* Spacing around items */
+  border: none; /* Remove default border */
+  display: none; /* Hide by default */
+  z-index: 100; /* Ensure it stays on top */
+}
+
+.dropdown-menu li {
+  margin: 0; /* Remove margins for dropdown items */
+}
+
+.dropdown-menu button {
+  display: block; /* Make dropdown items block level */
+  width: 100%; /* Full width */
+  text-align: center; /* Align text to the left */
+  padding: 10px 15px; /* Padding for dropdown items */
+}
+
+.navbar-logo {
+  width: 100px;  /* Resize the width of the logo */
+  height: auto; /* Maintain aspect ratio */
+
+}

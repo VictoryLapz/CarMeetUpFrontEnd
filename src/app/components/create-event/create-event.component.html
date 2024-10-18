@@ -1,0 +1,34 @@
+<div class="event-page">
+  <div class="create-event-container">
+    <h2>Create Event</h2>
+<hr>
+    <form (ngSubmit)="createEvent()">
+      <div>
+        <label>Title:</label>
+        <input [(ngModel)]="newEvent.title" name="title" required>
+      </div>
+      <div>
+        <label>Location:</label>
+        <input [(ngModel)]="newEvent.location" name="location" required>
+      </div>
+      <div>
+        <label>Date:</label>
+        <input [(ngModel)]="newEvent.date" name="date" type="date" required>
+      </div>
+      <div>
+        <label>Description:</label>
+        <textarea [(ngModel)]="newEvent.description" name="description"></textarea>
+      </div>
+      <div>
+        <label>Capacity:</label>
+        <input [(ngModel)]="newEvent.capacity" name="capacity" type="number" required>
+      </div>
+      <div>
+        <label>Car ID:</label>
+        <input [(ngModel)]="newEvent.carId" name="carId" type="number" required>
+      </div>
+
+      <button type="submit">Create Event</button>
+    </form>
+  </div>
+</div>
