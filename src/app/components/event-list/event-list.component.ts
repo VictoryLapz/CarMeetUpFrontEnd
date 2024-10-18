@@ -25,8 +25,8 @@ export class EventListComponent implements OnInit{
   }
 
   loadEvents() {
-    this.eventapiservice.getEvents().subscribe(
-      (events) => {
+    this.eventapiservice.getAllEvents().subscribe(
+      (events: Event[]) => {
       this.events = events;
     })
   }
