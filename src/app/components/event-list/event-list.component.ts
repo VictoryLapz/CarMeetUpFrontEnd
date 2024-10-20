@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { EventApiService } from '../../services/event-api.service';
 import { Event } from '../../models/event';
 import { RouterModule } from '@angular/router';
-import { EventDetailsComponent } from '../event-details/event-details.component';
 import { EventSignupService } from '../../services/event-signup.service';
 import { EventSignupComponent } from '../event-signup/event-signup.component';
 
@@ -11,7 +10,7 @@ import { EventSignupComponent } from '../event-signup/event-signup.component';
 @Component({
   selector: 'app-event-list',
   standalone: true,
-  imports: [CommonModule, RouterModule, EventDetailsComponent, EventSignupComponent],
+  imports: [CommonModule, RouterModule, EventSignupComponent],
   templateUrl: './event-list.component.html',
   styleUrl: './event-list.component.css'
 })
