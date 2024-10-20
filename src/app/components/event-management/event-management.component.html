@@ -1,0 +1,36 @@
+<div class="event-management-page">
+  <div class="search-container">
+    <h2>Search Events by Car Make</h2>
+    <hr>
+
+    <div>
+      <label for="searchMake">Search by Car Make:</label>
+      <input [(ngModel)]="searchMake" placeholder="Enter car make" type="text" />
+      <button (click)="searchEventsByCarMake()">Search</button>
+    </div>
+  </div>
+
+
+  <div *ngIf="events.length === 0">No events available.</div>
+  <div class="row" *ngIf="events.length > 0">
+    <div class="col-md-4" *ngFor="let event of events">
+      <div class="card" style="width: 18rem;">
+
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Event Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ event.title }}</h5>
+          <p class="card-text">{{ event.description }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Location: {{ event.location }}</li>
+          <li class="list-group-item">Date: {{ event.date | date }}</li>
+          <li class="list-group-item">Capacity: {{ event.capacity }}</li>
+        </ul>
+        <div class="card-body">
+
+          <button >Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

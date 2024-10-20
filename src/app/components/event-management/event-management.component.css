@@ -1,0 +1,109 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.event-management-page {
+  margin: 0 auto;
+  padding: 60px;
+}
+
+
+.search-container {
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #1f1d1d;
+  margin-bottom: 30px;
+}
+
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  font-style: oblique;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 5px;
+  border: 1px solid rgba(97, 94, 94, 0.5);
+  background-color: #636161;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #474545;
+  color: rgb(247, 245, 245);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5c4a54;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  background-color: #1f1d1d;
+  color: rgb(247, 245, 245);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-10px); /* Raises the card slightly */
+  box-shadow: 0 8px 16px rgba(182, 11, 173, 0.2); /* Adds a deeper shadow on hover */
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card-text {
+  color: #bbbbbb;
+}
+
+.list-group-item {
+  background-color: #1f1d1d;
+  color: #bbbbbb;
+  border: 1px solid rgba(97, 94, 94, 0.5);
+}
+
+.card-body a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card-body a:hover {
+  text-decoration: underline;
+}
+
+/* Adjust the row layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.col-md-4 {
+  flex: 1 1 50%;
+  max-width: 300px; }
+
+.list-group-item {
+  background-color: #1f1d1d;
+  color: #bbbbbb;
+  border: none;
+
+
+}

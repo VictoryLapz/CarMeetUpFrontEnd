@@ -1,85 +1,74 @@
-/* This section links the font on the page to all writing to be the same -------------------------- */
-:root {
-  --font-main: 'Roboto', sans-serif; /* Main font for buttons and text */
-}
-
-body {
-  font-family: var(--font-main); /* Apply main font to the body */
-}
-
-/* ^^^^^^^^^^^^^^^^^^^^^^^This section links the font on the page to all writing to be the same */
-
-
-
-/* This section controls the css for the side bar */
+/* Apply a full width container to prevent Bootstrap's grid system from misaligning */
 .container {
   display: flex;
-  height: calc(100vh - 100px); /* Adjust height to account for the fixed navbar */
-  margin-top: 100px; /* Add margin to push content below the fixed navbar */
+  height: calc(100vh - 100px); /* Full height minus navbar */
+  margin-top: 100px; /* Push content below the fixed navbar */
+  width: 100%; /* Ensure full width */
 }
 
+/* Sidebar will stay on the left */
 .sidebar {
-  width: 250px; /* Width of your sidebar */
+  width: 250px; /* Sidebar width */
   background-color: #121212; /* Background color */
-  padding: 40px; /* Spacing around buttons */
-  padding-top: 30px; /* Add top padding to create space */
+  padding: 40px; /* Spacing */
+  padding-top: 30px;
   overflow-y: auto; /* Enable vertical scrolling */
-  height: 100%; /* Make it full height */
-  border-right: 1px solid rgba(97, 94, 94, 0.5); /* Thin translucent gray bottom border */
+  height: 100vh; /* Full height */
+  position: fixed; /* Fixed sidebar */
+  left: 60px; /* Align to the left */
+  top: 100px; /* Same as navbar margin-top to account for the navbar */
+  border-right: 1px solid rgba(97, 94, 94, 0.5); /* Border */
 }
 
-/* This section controls the css the "headers" in the side bar */
-
-.sidebar h2 {
-  color: rgba(146, 143, 143, 0.5); ; /* Change to your preferred color */
-  margin: 20px 0; /* Spacing above and below the header */
-  font-size: 20px;
-  font-weight: 100; /* Thinner font weight */
-  border-top: 1px solid rgba(66, 64, 64, 0.5); /* Thin translucent gray bottom border */
-  padding-top: 25px;
-}
-
-/* This section controls the css the "headers" in the side bar */
-
-
-
-.sidebar button {
-  width: 100%; /* Make buttons full width */
-  margin: 10px 0; /* Spacing between buttons */
-  padding: 10px; /* Padding inside buttons */
-  background-color: #121212; /* Button background color */
-  color: rgb(247, 243, 243); /* Text color */
-  font-size: 17px;
-  font-weight: 100; /* Thinner font weight */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Optional rounding */
-  cursor: pointer; /* Pointer cursor on hover */
-
-}
-
-.sidebar button:hover {
-  background-color: #1d1d1f; /* Darken button on hover */
-}
-
+/* Main content will take the remaining space */
 main {
-  flex: 1; /* Take the remaining space */
-  padding: 30px; /* Spacing around main content */
+  flex: 1;
+  padding: 30px;
+  margin-left: center; /* Offset main content to the right of the sidebar */
 }
 
-/* Custom scrollbar for the sidebar */
+/* Sidebar scrollbar styling */
 .sidebar::-webkit-scrollbar {
-  width: 3px; /* Width of the scrollbar */
+  width: 3px;
 }
 
 .sidebar::-webkit-scrollbar-track {
-  background: #121212; /* Background color of the scrollbar track */
+  background: #121212;
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-  background-color: #333333; /* Color of the scrollbar thumb */
-  border-radius: 4px; /* Rounded corners for the thumb */
-  border: 1px solid rgba(97, 94, 94, 0.5); /* Thin translucent gray bottom border */
+  background-color: #333333;
+  border-radius: 4px;
+  border: 1px solid rgba(97, 94, 94, 0.5);
 }
+
+/* Style for headers inside the sidebar */
+.sidebar h2 {
+  color: rgba(146, 143, 143, 0.5);
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 100;
+  border-top: 1px solid rgba(66, 64, 64, 0.5);
+  padding-top: 25px;
+}
+
+.sidebar button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #121212;
+  color: rgb(247, 243, 243);
+  font-size: 17px;
+  font-weight: 100;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background-color: #1d1d1f;
+}
+
 
 /*-----------------------------------------------------------------------------------------------------------*/
 
