@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Car } from '../models/car';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/enviornment.prod';
 import { catchError } from 'rxjs';
 
 @Injectable({
