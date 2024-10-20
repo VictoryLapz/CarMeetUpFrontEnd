@@ -1,1 +1,10 @@
-<p>event-details works!</p>
+<div *ngIf="event">
+    <h2>{{ event.title }}</h2>
+    <p>Location: {{ event.location }}</p>
+    <p>Date: {{ event.date }}</p>
+    <p>Description: {{ event.description }}</p>
+    <p>Capacity: {{ event.capacity }}</p>
+  </div>
+  <div *ngIf="!event">
+    <p>Loading event details...</p>
+  </div>
