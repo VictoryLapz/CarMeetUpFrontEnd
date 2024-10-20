@@ -13,9 +13,9 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './create-event.component.html',
   styleUrl: './create-event.component.css'
 })
-export class CreateEventComponent implements OnInit {
+export class CreateEventComponent {
 
-  events: Event[] = []; 
+  events: Event[] = [];
   newEvent: EventDto = {
     title: '',
     location: '',
@@ -28,24 +28,6 @@ export class CreateEventComponent implements OnInit {
   selectedEvent?: Event;
   constructor(private eventApiService: EventApiService) {}
 
-  ngOnInit(): void {
-    this.getAllEvents();
-  }
-
-  getAllEvents(): void {
-    this.eventApiService.getAllEvents().subscribe({
-      next: (events) => this.events = events,
-      error: (err) => console.error(err)
-    });
-  }
-
-  getEventById(id: number): void {
-    this.eventApiService.getEventById(id).subscribe({
-      next: (event) => this.selectedEvent = event,
-      error: (err) => console.error(err)
-    });
-  }
-
   createEvent(): void {
     this.eventApiService.createEvent(this.newEvent).subscribe({
       next: (createdEvent) => {
@@ -55,34 +37,5 @@ export class CreateEventComponent implements OnInit {
       error: (err) => console.error(err)
     });
   }
-
-  updateEvent(id: number): void {
-    this.eventApiService.updateEvent(id, this.newEvent).subscribe({
-      next: (updatedEvent) => {
-        const index = this.events.findIndex(event => event.eventId === id);
-        if (index !== -1) {
-          this.events[index] = updatedEvent;
-        }
-      },
-      error: (err) => console.error(err)
-    });
-  }
-
-  deleteEvent(id: number): void {
-    this.eventApiService.deleteEvent(id).subscribe({
-      next: () => {
-        this.events = this.events.filter(event => event.eventId !== id);
-      },
-      error: (err) => console.error(err)
-    });
-  }
-
-  searchEventsByCarMake(): void {
-    this.eventApiService.searchEventsByCarMake(this.searchMake).subscribe({
-      next: (events) => this.events = events,
-      error: (err) => console.error(err)
-    });
-  }
-
 
 }

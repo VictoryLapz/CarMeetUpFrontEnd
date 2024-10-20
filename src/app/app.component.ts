@@ -14,5 +14,5 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   title = 'The Car Lounge';
-  
+
 }

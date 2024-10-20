@@ -11,7 +11,7 @@ export const routes: Routes = [
     children: [ /* doing this child patern here ensure that the main page goes to every page*/
       { path: 'create-event', component: CreateEventComponent } /* chid routes go here */,
       { path: 'event-list', component: EventListComponent},
-        {path: 'event/id', component:EventDetailsComponent}, 
+        {path: 'event/id', component:EventDetailsComponent},
         {path: 'sign-up', component:EventSignupComponent},]
   }
 ]
