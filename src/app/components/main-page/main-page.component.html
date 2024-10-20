@@ -1,0 +1,47 @@
+<nav class="top-navbar">
+  <ul>
+    <li class="dropdown">
+      <button (click)="toggleDropdown()" class="dropdown-toggle">Services</button>
+      <ul class="dropdown-menu" *ngIf="isDropdownOpen">
+        <li><button (click)="navigateTo('service1')">Service 1</button></li>
+        <li><button (click)="navigateTo('service2')">Service 2</button></li>
+        <li><button (click)="navigateTo('service3')">Service 3</button></li>
+      </ul>
+    </li>
+    <li class="search-container">
+      <input type="text" placeholder="Search..." class="search-input">
+      <button class="search-button">Search</button>
+    </li>
+    <li>
+      <app-auth-button></app-auth-button>
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <nav class="sidebar">
+    <pre>
+
+
+    </pre>
+    <h2>Options</h2>
+    <button (click)="navigateTo('create-event')">Create Event</button>
+    <button (click)="navigateTo('')">Look at Cars</button>
+    <button (click)="navigateTo('')">See my events</button>
+    <button (click)="navigateTo('')">Contact</button>
+
+    <h2>Test Section</h2>
+    <button>Test 1</button>
+    <button>Test 2</button>
+    <button>Test 3</button>
+    <button>Test 4</button>
+    <button>Test 5</button>
+    <button>Test 6</button>
+    <button>Test 7</button>
+  </nav>
+
+  <main>
+    <router-outlet></router-outlet> 
+  </main>
+</div>
+

@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+/* styles.css */
+
+body {
+  background-color: #121212; /* Dark background color */
+  color: #ffffff; /* Light text color for better contrast */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Optional: set a font */
+}
+
+/* Optional: Style for any links, buttons, etc. */
+a {
+  color: #1e90ff; /* Bright link color */
+}
+
+button {
+  background-color: #007bff; /* Button background color */
+  color: #ffffff; /* Button text color */
+}

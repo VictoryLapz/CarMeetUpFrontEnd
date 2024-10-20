@@ -1,0 +1,89 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+}
+
+/* Main event page container */
+.event-page {
+  margin: 0 auto;
+  padding: 60px;
+}
+
+/* Container for the create event form */
+.create-event-container {
+  padding: 80px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #1f1d1d; /* Background color */
+  margin-bottom: 30px;
+}
+
+.create-event-container h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+
+}
+
+/* Styling for the input fields */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  font-style: oblique;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 5px; /* Optional rounding */
+  border: 1px solid rgba(97, 94, 94, 0.5);
+  background-color: #636161; /* Background color */
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+/* Styling for buttons */
+button {
+  width: 100%; /* Make buttons full width */
+  padding: 10px; /* Padding inside buttons */
+  font-size: 26px;
+  margin-top: 10px; /* Margin between buttons */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Optional rounding */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button[type="submit"] {
+  background-color: #474545; /* Button background color */
+  color: rgb(247, 245, 245); /* Text color */
+}
+
+button[type="submit"]:hover {
+  background-color: #5c4a54; /* Darken button on hover */
+}
+
+/* Event list styling */
+ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+li {
+  padding: 10px; /* Spacing around list items */
+  border-bottom: 1px solid #ddd; /* Bottom border */
+}
+
+li button {
+  margin-left: 10px; /* Space between buttons */
+  width: auto; /* Set width to auto for buttons */
+}
+
+button[ng-reflect-ng-click="getEventById(event.eventId)"],
+button[ng-reflect-ng-click="deleteEvent(event.eventId)"] {
+  background-color: #dc3545; /* Button background color */
+  color: white; /* Text color */
+}
+
+button[ng-reflect-ng-click="getEventById(event.eventId)"]:hover,
+button[ng-reflect-ng-click="deleteEvent(event.eventId)"]:hover {
+  background-color: #c82333; /* Darken button on hover */
+}
