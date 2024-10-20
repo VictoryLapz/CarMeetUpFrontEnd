@@ -1,14 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { EventDetailsComponent } from '../event-details/event-details.component';
 import { EventSignupService } from '../../services/event-signup.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-event-signup',
   standalone: true,
-  imports: [CommonModule,RouterModule,EventDetailsComponent,FormsModule],
+  imports: [CommonModule,RouterModule,FormsModule],
   templateUrl: './event-signup.component.html',
   styleUrl: './event-signup.component.css'
 })

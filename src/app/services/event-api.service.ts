@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/enviornment.prod';
+import { environment } from '../../environments/environment.development';
 import { Event } from '../models/event';
 import { EventDto } from '../models/event-dto';
 import { Observable } from 'rxjs';
