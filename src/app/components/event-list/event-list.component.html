@@ -1,15 +1,13 @@
-
-<div *ngIf="events.length > 0"></div>
-    <h2>Event List</h2>
-    <ul>
-      <li *ngFor="let event of events">
-        <h3>{{ event.title }}</h3>
-        <p>{{ event.location }}</p>
-        <p>{{ event.date }}</p>
-      </li>
-    </ul>
-
-  
-  <div *ngIf="events.length === 0">
-    <p>No events available.</p>
-  </div>
+<div *ngIf="events.length > 0">
+  <h2>Event List</h2>
+  <ul>
+    <li *ngFor="let event of events">
+      <app-event-details [event]="event"></app-event-details>
+      <button (click)="signUpForEvent(event.eventId)">Sign Up</button>
+      <a [routerLink]="['/event', event.eventId]">View Event</a>
+    </li>
+  </ul>
+</div>
+<div *ngIf="events.length === 0">
+  <p>No events found.</p>
+</div>

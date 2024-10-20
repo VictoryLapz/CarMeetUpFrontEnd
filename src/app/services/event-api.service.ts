@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/enviornment.prod';
 import { Event } from '../models/event';
 import { EventDto } from '../models/event-dto';
-import { EventSignUpDto } from '../models/event-signup-dto';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, throwError } from 'rxjs';
