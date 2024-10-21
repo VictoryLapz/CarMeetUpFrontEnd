@@ -1,16 +1,31 @@
-<div>
-    <h2>Sign Up for Event</h2>
-    <form (ngSubmit)="onSubmit()">
-      <p>Event ID:</p>
-      <input type="number" [(ngModel)]="eventId" name="eventId" required />
-      
-      <button type="submit">Sign Up</button>
-    </form>
-  
-    <div *ngIf="successMessage" class="success-message">
-      {{ successMessage }}
+<div class="event-signup-page">
+  <h2>Your Event Signups</h2>
+  <hr>
+
+  <div *ngIf="eventSignUps.length === 0">You have no event sign-ups.</div>
+
+  <div class="row" *ngIf="eventSignUps.length > 0">
+    <div class="col-md-4" *ngFor="let signup of eventSignUps">
+      <div class="card" style="width: 18rem;">
+
+
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Event Image">
+
+        <div class="card-body">
+          <h5 class="card-title">{{ signup.eventName }}</h5>
+          <p class="card-text">{{ signup.eventDescription }}</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Location: {{ signup.eventLocation }}</li>
+          <li class="list-group-item">Date: {{ signup.eventTime | date }}</li>
+        </ul>
+
+        <div class="card-body">
+          <!-- Button to delete the event sign-up -->
+          <button (click)="deleteSignUp(signup.eventId)" class="btn btn-danger">Cancel Sign Up</button>
+        </div>
+      </div>
     </div>
-    <div *ngIf="errorMessage" class="error-message">
-      {{ errorMessage }}
-    </div>
-  ng 
+  </div>
+</div>
