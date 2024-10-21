@@ -14,11 +14,11 @@ export const appConfig: ApplicationConfig = {
     //This information comes from the auth0 dashboard
     //You'll have to fill it out for yourself.
     provideAuth0({
-      domain: 'dev-5w5l8ake23bk7o4h.us.auth0.com',
-      clientId: 'EpZ1q9guhNdJjFNexQtARR6H7fiajkqD',
+      domain: 'dev-jm6hvg0klmxse04f.us.auth0.com', //what was in Domain on Auth0
+      clientId: 'jJUBaIxYsBitkphghK5yJ8j5An14z8rP', //what was in Client Id on Auth0
       authorizationParams: {
         redirect_uri: window.location.origin,
-        audience: "https://recipe-api.com",
+        audience: "https://careventmeetup.z13.web.core.windows.net/", //may need to change later??
         useRefreshTokens: true,
         cacheLocation: "memory"
       }
