@@ -1,6 +1,8 @@
 <nav class="top-navbar">
   <ul>
-    <li class="dropdown">
+
+        <!-- Commented out section below for now, considering its not used. We can reuse later if need be. -->
+    <!-- <li class="dropdown">
       <button (click)="toggleDropdown()" class="dropdown-toggle">Services</button>
       <ul class="dropdown-menu" *ngIf="isDropdownOpen">
         <li><button (click)="navigateTo('service1')">Service 1</button></li>
@@ -11,7 +13,7 @@
     <li class="search-container">
       <input type="text" placeholder="Search..." class="search-input">
       <button class="search-button">Search</button>
-    </li>
+    </li> -->
     <li>
       <app-auth-button></app-auth-button>
     </li>
@@ -22,22 +24,27 @@
   <nav class="sidebar">
     <pre>
 
+    </pre>
+    <h2>Event Options</h2>
+    <!-- Cleaned up the first section, components and such will still need to be added here -->
+    <button (click)="navigateTo('event-list')">Home</button> <!-- Freddie this is what you have to work on and show. -->
+    <button (click)="navigateTo('create-event')">Create Event</button> <!-- This is what I cannot get to work, will have to bug Jonathan about it tomorrow. -->
+    <button (click)="navigateTo('manage-event')">Search Events by Car</button> <!-- This this works! -->
+    <button (click)="navigateTo('sign-up')">My Events</button> <!-- This is currently hardcoded for the user, I found some Slack Overflow example and commented it out in the SignUpComponent -->
+
+    <pre>
 
     </pre>
-    <h2>Event Management</h2>
-    <button (click)="navigateTo('create-event')">Create Event</button>
-    <button (click)="navigateTo('manage-event')">Manage Events</button>
-    <button (click)="navigateTo('event-list')">See all events</button>
-    <button (click)="navigateTo('sign-up')">See my events</button>
+    <h2>Car Options</h2>
 
-    <h2>Test Section</h2>
-    <button>Test 1</button>
-    <button>Test 2</button>
-    <button>Test 3</button>
-    <button>Test 4</button>
-    <button>Test 5</button>
-    <button>Test 6</button>
-    <button>Test 7</button>
+<!-- Created a section to intergrat our car third party and internal CAR API. Buttons are junk, we can adjust routing after comonents are created. -->
+    <button (click)="navigateTo('create-event')">Browse all Cars</button>  <!-- Needs a component created along with applicable HTML and CSS -->
+    <button (click)="navigateTo('create-event')">Add a Car</button> <!-- Needs a component created along with applicable HTML and CSS -->
+    <button (click)="navigateTo('create-event')">Update Car</button> <!-- Needs a component created along with applicable HTML and CSS -->
+    <button (click)="navigateTo('create-event')">Add Car Makes</button> <!-- Needs a component created along with applicable HTML and CSS -->
+    <button (click)="navigateTo('create-event')">Browse Car Brands</button> <!-- Needs a component created along with applicable HTML and CSS -->
+
+
   </nav>
 
   <main>
