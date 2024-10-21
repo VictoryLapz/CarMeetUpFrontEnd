@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/enviornment.prod';
+import { environment } from '../../environments/environment.development';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, throwError } from 'rxjs';
@@ -11,7 +11,7 @@ import { EventSignUp } from '../models/event-signup';
 })
 export class EventSignupService {
 
-  signUpURL: string = environment.apiUrl + "/Sign-up";
+  signUpURL: string = environment.apiUrl + "/EventSignUp";
 
   constructor(private httpClient: HttpClient) { }
 

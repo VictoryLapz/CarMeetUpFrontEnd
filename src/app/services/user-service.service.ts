@@ -11,7 +11,7 @@ import { UserDto } from '../models/user-dto';
 })
 export class UserServiceService {
 
-  userURL: string = environment.apiUrl + "/Sign-up";
+  userURL: string = environment.apiUrl + "/User";
 
   constructor(private httpClient: HttpClient) { }
 

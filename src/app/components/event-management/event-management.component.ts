@@ -60,8 +60,13 @@ export class EventManagementComponent implements OnInit {
 
   searchEventsByCarMake(): void {
     this.eventApiService.searchEventsByCarMake(this.searchMake).subscribe({
-      next: (events) => this.events = events,
+      next: (events) => {
+        console.log('Filtered events:', events);
+        this.events = events;
+      },
       error: (err) => console.error(err)
     });
   }
-}
+
+  }
+
