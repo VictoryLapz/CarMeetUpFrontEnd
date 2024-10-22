@@ -8,8 +8,8 @@ import { provideAuth0 } from '@auth0/auth0-angular';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }), 
-    provideRouter(routes), 
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
     provideHttpClient(withInterceptors([authInterceptor])),
     //This information comes from the auth0 dashboard
     //You'll have to fill it out for yourself.

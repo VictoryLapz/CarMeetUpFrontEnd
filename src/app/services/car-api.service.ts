@@ -46,6 +46,10 @@ export class CarApiService {
     );
   }
 
+  getCarMakes(): Observable<string[]> {
+    return this.httpClient.get<string[]>(`${this.carUrl}/CarMakes`);
+  }
+
 
 //added some validation incase we need it
 
