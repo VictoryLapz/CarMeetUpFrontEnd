@@ -6,6 +6,8 @@ import { EventSignupComponent } from './components/event-signup/event-signup.com
 import { EventManagementComponent } from './components/event-management/event-management.component';
 import { EventListComponent } from './components/event-list/event-list.component';
 import { CarMakesComponent } from './components/car-makes/car-makes.component';
+import { CarDetailsComponent } from './components/car-details/car-details.component';
+
 
 
 export const routes: Routes = [
@@ -17,6 +19,8 @@ export const routes: Routes = [
       {path: 'manage-event', component:EventManagementComponent},
       {path: 'event-list', component:EventListComponent},
       {path: 'browse-makes', component:CarMakesComponent}
+      {path: 'car-details', component:CarDetailsComponent},
+
       ]
   }
 ]
