@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Car } from '../models/car';
-import { environment } from '../../environments/enviornment.prod';
+import { environment } from '../../environments/environment.development';
 import { catchError } from 'rxjs';
 
 @Injectable({
@@ -44,6 +44,10 @@ export class CarApiService {
     return this.httpClient.get<Car[]>(`${this.carUrl}/external/${make}`).pipe(
       catchError(this.handleError)
     );
+  }
+
+  getCarMakes(): Observable<string[]> {
+    return this.httpClient.get<string[]>(`${this.carUrl}/CarMakes`);
   }
 
 

@@ -8,8 +8,8 @@ import { provideAuth0 } from '@auth0/auth0-angular';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }), 
-    provideRouter(routes), 
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
     provideHttpClient(withInterceptors([authInterceptor])),
     //This information comes from the auth0 dashboard
     //You'll have to fill it out for yourself.
@@ -18,7 +18,7 @@ export const appConfig: ApplicationConfig = {
       clientId: 'jJUBaIxYsBitkphghK5yJ8j5An14z8rP', //what was in Client Id on Auth0
       authorizationParams: {
         redirect_uri: window.location.origin,
-        audience: "https://careventmeetup.z13.web.core.windows.net/", //may need to change later??
+        audience: "https://careventapi", //may need to change later??
         useRefreshTokens: true,
         cacheLocation: "memory"
       }
