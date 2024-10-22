@@ -1,1 +1,13 @@
-<p>car-details works!</p>
+<div *ngIf="cars.length === 0">No cars available.</div>
+  <div class="row" *ngIf="cars.length > 0">
+    <div class="col-md-4" *ngFor="let car of cars">
+      <div class="card" style="width: 18rem;">
+
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Event Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ car.make }}</h5>
+          <p class="card-text">{{ car.model }}</p>
+      </div>
+    </div>
+  </div>
+</div>
