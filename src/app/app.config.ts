@@ -18,7 +18,7 @@ export const appConfig: ApplicationConfig = {
       clientId: 'jJUBaIxYsBitkphghK5yJ8j5An14z8rP', //what was in Client Id on Auth0
       authorizationParams: {
         redirect_uri: window.location.origin,
-        audience: "https://careventapi", //"https://careventapi" in case of changes when pushing?
+        audience: "https://careventapi", //may need to change later??
         useRefreshTokens: true,
         cacheLocation: "memory"
       }
