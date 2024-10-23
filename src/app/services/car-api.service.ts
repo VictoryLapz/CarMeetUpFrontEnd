@@ -19,14 +19,16 @@ export class CarApiService {
   }
 
   getCarById(id: number): Observable<Car> {
-    return this.httpClient.get<Car>(`${this.carUrl}/${id}`).pipe(catchError(this.handleError));
-  }
-
-  createCar(car: Omit<Car, 'Id'>): Observable<Car> {
-    return this.httpClient.post<Car>(`${this.carUrl}`, car).pipe(
+    return this.httpClient.get<Car>(`${this.carUrl}/byid/${id}`).pipe(
       catchError(this.handleError)
     );
   }
+
+  createCar(car: Car): Observable<Car> {
+    return this.httpClient.post<Car>(`${this.carUrl}`, car).pipe(
+      catchError(this.handleError)
+    );
+}
 
   updateCar(id: number, car: Car): Observable<void> {
     return this.httpClient.put<void>(`${this.carUrl}/${id}`, car).pipe(
