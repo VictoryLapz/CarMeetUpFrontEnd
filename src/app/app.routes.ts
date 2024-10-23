@@ -7,6 +7,7 @@ import { EventManagementComponent } from './components/event-management/event-ma
 import { EventListComponent } from './components/event-list/event-list.component';
 import { CarMakesComponent } from './components/car-makes/car-makes.component';
 import { CarDetailsComponent } from './components/car-details/car-details.component';
+import { AddCarComponent } from './components/add-car/add-car.component';
 
 
 
@@ -20,7 +21,8 @@ export const routes: Routes = [
       {path: 'event-list', component:EventListComponent},
       {path: 'browse-makes', component:CarMakesComponent},
       {path: 'car-details', component:CarDetailsComponent}
-
+      {path: 'add-car', component: AddCarComponent},
+      {path: 'event-list', component:EventListComponent}
       ]
   }
 ]
