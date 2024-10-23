@@ -1,0 +1,62 @@
+.list-group-item {
+  text-transform: uppercase;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.event-management-page {
+  margin: 0 auto;
+  padding: 60px;
+}
+
+.search-container {
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #1f1d1d;
+  margin-bottom: 30px;
+}
+
+.loading, .error {
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.list-group {
+  padding: 0; /* Removes default padding for cleaner look */
+}
+
+.list-group-item {
+  background-color: #1f1d1d;
+  color: #bbbbbb;
+  border: 1px solid rgba(97, 94, 94, 0.5);
+  border-radius: 10px; /* Rounded corners for list items */
+  margin-bottom: 10px; /* Spacing between list items */
+  display: flex; /* Flexbox to align items */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Padding inside list items */
+  transition: background-color 0.3s; /* Transition effect for hover */
+}
+
+.list-group-item:hover {
+  background-color: #474545; /* Darker background on hover */
+}
+
+.form-check {
+  display: flex;
+  align-items: center; /* Align radio button and label */
+}
+
+.form-check-input {
+  margin-right: 10px; /* Space between radio button and label */
+}
+
+.card-title {
+  font-size: 45px;
+  font-weight: bold;
+  color: #ffffff;
+  align-items: center;
+  transition: background-color 0.3s; /* Transition effect for hover */
+}
