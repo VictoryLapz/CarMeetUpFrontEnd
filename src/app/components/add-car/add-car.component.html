@@ -1,0 +1,59 @@
+<div class="add-car">
+    <div class="add-car-container">
+      <h2>Add a car!</h2>
+      <hr>
+  
+    
+      <div class="form-container">
+        <form (ngSubmit)="createCar()">
+          <div>
+            <label>Class (Car, Truck, SUV, etc.):</label>
+            <input class="small-input" [(ngModel)]="addCar.class" name="class-type" required>
+          </div>
+          <div>
+            <label>Combination MPG:</label>
+            <input class="number" [(ngModel)]="addCar.combinationMpg" name="combination-mpg">
+          </div>
+          <div>
+            <label>Number of Cylinders:</label>
+            <input class="number" [(ngModel)]="addCar.cylinders" name="cylinder-number">
+          </div>
+          <div>
+            <label>Engine Displacement:</label>
+            <input class="number" [(ngModel)]="addCar.displacement" name="engine-displacement">
+          </div>
+          <div>
+            <label>Drive Type (RWD, FWD, AWD, 4WD):</label>
+            <input class="small-input" [(ngModel)]="addCar.drive" name="drive-type" required>
+          </div>
+          <div>
+            <label>Fuel Type (Gas, Diesel, Electric, Hybird):</label>
+            <input class="small-input" [(ngModel)]="addCar.fuelType" name="fuel-type" required>
+          </div>
+          <div>
+            <label>Highway MPG:</label>
+            <input class="number" [(ngModel)]="addCar.highwayMpg" name="highway-mpg">
+          </div>
+          <div>
+            <label>Car Make:</label>
+            <input class="small-input" [(ngModel)]="addCar.make" name="car-make" required>
+          </div>
+          <div>
+            <label>Car Model:</label>
+            <input class="small-input" [(ngModel)]="addCar.model" name="car-make" required>
+          </div>
+          <div>
+            <label>Trasmission:</label>
+            <input class="small-input" [(ngModel)]="addCar.transmission" name="car-make" required>
+          </div>
+          <div>
+            <label>Car Year:</label>
+            <input class="number" [(ngModel)]="addCar.year" name="car-make" required>
+          </div>
+         
+          <button (click)="createCar()">Add a Car</button>
+        </form>
+      </div>
+  
+    </div>
+  </div>
