@@ -18,8 +18,8 @@ export const routes: Routes = [
       {path: 'sign-up', component:EventSignupComponent},
       {path: 'manage-event', component:EventManagementComponent},
       {path: 'event-list', component:EventListComponent},
-      {path: 'browse-makes', component:CarMakesComponent}
-      {path: 'car-details', component:CarDetailsComponent},
+      {path: 'browse-makes', component:CarMakesComponent},
+      {path: 'car-details', component:CarDetailsComponent}
 
       ]
   }
