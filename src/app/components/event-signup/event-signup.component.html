@@ -7,9 +7,7 @@
   <div class="row" *ngIf="eventSignUps.length > 0">
     <div class="col-md-4" *ngFor="let signup of eventSignUps">
       <div class="card" style="width: 18rem;">
-
-
-        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Event Image">
+        <img [src]="getRandomImage()" class="card-img-top" alt="Event Image">
 
         <div class="card-body">
           <h5 class="card-title">{{ signup.eventName }}</h5>
@@ -22,7 +20,6 @@
         </ul>
 
         <div class="card-body">
-          <!-- Button to delete the event sign-up -->
           <button (click)="deleteSignUp(signup.eventId)" class="btn btn-danger">Cancel Sign Up</button>
         </div>
       </div>

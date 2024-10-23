@@ -3,6 +3,8 @@ import { EventApiService } from '../../services/event-api.service';
 import { CommonModule } from '@angular/common';
 import { Event } from '../../models/event';
 import { FormsModule } from '@angular/forms';
+import { EventSignUp } from '../../models/event-signup';
+import { EventSignupService } from '../../services/event-signup.service';
 
 @Component({
   selector: 'app-event-management',
@@ -16,9 +18,9 @@ export class EventManagementComponent implements OnInit {
   events: Event[] = [];
   searchMake: string = '';
   selectedEvent?: Event;
+  userId: number = 5;
 
-
-  constructor(private eventApiService: EventApiService) {}
+  constructor(private eventApiService: EventApiService, private eventSignupService: EventSignupService) {}
 
   ngOnInit(): void {
     this.getAllEvents();
@@ -108,5 +110,19 @@ export class EventManagementComponent implements OnInit {
     'https://picsum.photos/300/200?random=29',
     'https://picsum.photos/300/200?random=30'
   ];
+
+  signUpForEvent(event: Event): void {
+    const eventSignUp: EventSignUp = {
+      userid: this.userId,
+      eventid: event.eventId
+    };
+
+    this.eventSignupService.createEventSignUp(eventSignUp).subscribe({
+      next: () => {
+        console.log('Signed up successfully');
+      },
+      error: (err) => console.error(err)
+    });
+  }
 
 }
