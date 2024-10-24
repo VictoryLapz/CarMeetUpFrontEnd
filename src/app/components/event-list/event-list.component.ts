@@ -5,12 +5,13 @@ import { Event } from '../../models/event';
 import { RouterModule } from '@angular/router';
 import { EventSignupService } from '../../services/event-signup.service';
 import { EventSignupComponent } from '../event-signup/event-signup.component';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-event-list',
   standalone: true,
-  imports: [CommonModule, RouterModule, EventSignupComponent],
+  imports: [CommonModule, RouterModule, EventSignupComponent, FormsModule],
   templateUrl: './event-list.component.html',
   styleUrl: './event-list.component.css'
 })
@@ -38,6 +39,14 @@ export class EventListComponent implements OnInit{
       this.events = events;
     })
   }
+
+  logEventId(event: Event): void {
+    console.log('Event:', event);
+    console.log('Event ID:', event.eventId); 
+     // Log the entire event object
+  }  
+
+  
   signUpForEvent(eventId: number): void {
     const eventSignUp = { userid: this.userId, eventid: eventId };
     this.eventSignup.createEventSignUp(eventSignUp).subscribe(
