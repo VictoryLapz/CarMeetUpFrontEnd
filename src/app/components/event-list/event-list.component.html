@@ -5,7 +5,7 @@
     <div class="row" *ngIf="events.length > 0">
       <div class="col-md-4" *ngFor="let event of events">
         <div class="card" style="width: 18rem;">
-          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Event Image">
+          <img [src]="getRandomImage()" class="card-img-top" alt="Event Image">
           <div class="card-body">
             <h5 class="card-title">{{ event.title }}</h5>
             <ul class="list-group list-group-flush">
