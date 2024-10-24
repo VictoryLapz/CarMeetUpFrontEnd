@@ -1,26 +1,9 @@
 <nav class="top-navbar">
   <a routerLink="/event-list" class="home-button">
-    <!-- <img src="" alt="Logo" class="home-logo"> Ensure this path is correct -->
     The Car Lounge
   </a>
   <ul>
-
-        <!-- Commented out section below for now, considering its not used. We can reuse later if need be. -->
-    <!-- <li class="dropdown">
-      <button (click)="toggleDropdown()" class="dropdown-toggle">Services</button>
-      <ul class="dropdown-menu" *ngIf="isDropdownOpen">
-        <li><button (click)="navigateTo('service1')">Service 1</button></li>
-        <li><button (click)="navigateTo('service2')">Service 2</button></li>
-        <li><button (click)="navigateTo('service3')">Service 3</button></li>
-      </ul>
-    </li>
-    <li class="search-container">
-      <input type="text" placeholder="Search..." class="search-input">
-      <button class="search-button">Search</button>
-    </li> -->
-    
     <li>
-      
       <app-auth-button></app-auth-button>
     </li>
   </ul>
@@ -28,31 +11,26 @@
 
 <div class="container">
   <nav class="sidebar">
-    <pre>
-    </pre>
     <h2>Event Options</h2>
-    <!-- Cleaned up the first section, components and such will still need to be added here -->
-    <button (click)="navigateTo('event-list')">Browse All Events</button> <!-- Freddie this is what you have to work on and show. -->
-    <button (click)="navigateTo('create-event')">Create Event</button> <!-- This is what I cannot get to work, will have to bug Jonathan about it tomorrow. -->
-    <button (click)="navigateTo('manage-event')">Search Events by Car</button> <!-- This this works! -->
-    <button (click)="navigateTo('sign-up')">My Events</button> <!-- This is currently hardcoded for the user, I found some Slack Overflow example and commented it out in the SignUpComponent -->
+    <button (click)="navigateTo('event-list')">Browse All Events</button>
+    <button (click)="navigateTo('create-event')">Create Event</button>
+    <button (click)="navigateTo('manage-event')">Search Events by Car</button>
+    <button (click)="navigateTo('sign-up')">My Events</button>
 
-    <pre>
-
-    </pre>
     <h2>Car Options</h2>
-
-<!-- Created a section to intergrat our car third party and internal CAR API. Buttons are junk, we can adjust routing after comonents are created. -->
-    <button (click)="navigateTo('car-details')">Browse all Cars</button>  <!-- Needs a component created along with applicable HTML and CSS -->
-    <button (click)="navigateTo('add-car')">Add a Car</button> <!-- Needs a component created along with applicable HTML and CSS -->
-    <button (click)="navigateTo('manage-car')">Manage Car</button> <!-- Needs a component created along with applicable HTML and CSS -->
-    <button (click)="navigateTo('browse-makes')">Lounge Car Brands</button> <!-- Needs a component created along with applicable HTML and CSS -->
-
-
+    <button (click)="navigateTo('car-details')">Browse all Cars</button>
+    <button (click)="navigateTo('add-car')">Add a Car</button>
+    <button (click)="navigateTo('manage-car')">Manage Car</button>
+    <button (click)="navigateTo('browse-makes')">Lounge Car Brands</button>
   </nav>
 
   <main>
-    <router-outlet></router-outlet>
+    <div *ngIf="!isChildRoute; else childContent">
+      <h2>Welcome to the Car Lounge</h2>
+      <p>Select an option from the sidebar to get started!</p>
+    </div>
+    <ng-template #childContent>
+      <router-outlet></router-outlet>
+    </ng-template>
   </main>
 </div>
-
