@@ -1,4 +1,8 @@
 <nav class="top-navbar">
+  <a routerLink="/event-list" class="home-button">
+    <!-- <img src="" alt="Logo" class="home-logo"> Ensure this path is correct -->
+    The Car Lounge
+  </a>
   <ul>
 
         <!-- Commented out section below for now, considering its not used. We can reuse later if need be. -->
@@ -14,7 +18,9 @@
       <input type="text" placeholder="Search..." class="search-input">
       <button class="search-button">Search</button>
     </li> -->
+    
     <li>
+      
       <app-auth-button></app-auth-button>
     </li>
   </ul>
@@ -23,11 +29,10 @@
 <div class="container">
   <nav class="sidebar">
     <pre>
-
     </pre>
     <h2>Event Options</h2>
     <!-- Cleaned up the first section, components and such will still need to be added here -->
-    <button (click)="navigateTo('event-list')">Home</button> <!-- Freddie this is what you have to work on and show. -->
+    <button (click)="navigateTo('event-list')">Browse All Events</button> <!-- Freddie this is what you have to work on and show. -->
     <button (click)="navigateTo('create-event')">Create Event</button> <!-- This is what I cannot get to work, will have to bug Jonathan about it tomorrow. -->
     <button (click)="navigateTo('manage-event')">Search Events by Car</button> <!-- This this works! -->
     <button (click)="navigateTo('sign-up')">My Events</button> <!-- This is currently hardcoded for the user, I found some Slack Overflow example and commented it out in the SignUpComponent -->

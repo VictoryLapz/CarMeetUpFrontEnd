@@ -1,0 +1,26 @@
+.navbar {
+    position: fixed; /* Keep the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the navbar span the full width */
+    background-color: #333; /* Navbar background color */
+    padding: 10px; /* Space around the content */
+  }
+  
+  .home-button {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: absolute; /* Position relative to the navbar */
+    top: 10px; /* Fine-tune the vertical position */
+    left: 10px; /* Fine-tune the horizontal position */
+  }
+  
+  .home-button:hover {
+    background-color: #0056b3; /* Darken on hover */
+  }

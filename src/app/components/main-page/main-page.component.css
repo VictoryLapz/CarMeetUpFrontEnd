@@ -44,12 +44,15 @@ main {
 
 /* Style for headers inside the sidebar */
 .sidebar h2 {
-  color: rgba(146, 143, 143, 0.5);
-  margin: 20px 0;
-  font-size: 20px;
-  font-weight: 100;
-  border-top: 1px solid rgba(66, 64, 64, 0.5);
-  padding-top: 25px;
+  font-size: 1.1rem; /* Larger text for The Car Lounge */
+  font-weight: bold;
+  color: #4b5368;
+  background-color: #acd2e6;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 20px
 }
 
 .sidebar button {
@@ -153,4 +156,18 @@ main {
   width: 100px;  /* Resize the width of the logo */
   height: auto; /* Maintain aspect ratio */
 
+}
+.home-button {
+  font-size: 2rem; /* Larger text size */
+  font-weight: bold;
+  color: #4b5368;
+  background-color: #acd2e6;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 20px;
+  position: absolute; /* Position it absolutely */
+  top: 10px; /* Fine-tune as needed */
+  left: 10px; /* Fine-tune as needed */
 }

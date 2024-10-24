@@ -1,12 +1,22 @@
-<div *ngIf="events.length > 0">
+  <div class="event-signup-page">
     <h2>Event List</h2>
-    <ul>
-      <li *ngFor="let event of events">
-        <button (click)="signUpForEvent(event.eventId)">Sign Up</button>
-        <a [routerLink]="['/event', event.eventId]">View Event</a>
-      </li>
-    </ul>
-  </div>
-  <div *ngIf="events.length === 0">
-    <p>No events found.</p>
-  </div>
+    <hr>
+    <div *ngIf="events.length === 0">No events available.</div>
+    <div class="row" *ngIf="events.length > 0">
+      <div class="col-md-4" *ngFor="let event of events">
+        <div class="card" style="width: 18rem;">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Event Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ event.title }}</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Location: {{ event.location }}</li>
+              <li class="list-group-item">Date: {{ event.date | date }}</li>
+            </ul>
+            <div class="card-body">
+              <button (click)="signUpForEvent(event.eventId)" class="btn btn-primary">Sign Up</button>
+              <a [routerLink]="['/event', event.eventId]" (click)="logEventId(event)" class="btn btn-secondary">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

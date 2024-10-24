@@ -1,10 +1,19 @@
-<!-- <div *ngIf="event">
-    <h2>{{ event.title }}</h2>
-    <p>Location: {{ event.location }}</p>
-    <p>Date: {{ event.date }}</p>
-    <p>Description: {{ event.description }}</p>
-    <p>Capacity: {{ event.capacity }}</p>
+<div class="event-signup-page">
+  <h2>Event Details</h2>
+  <hr>
+
+  <div *ngIf="event">
+    <div class="card" style="width: 18rem;">
+      <img src="https://via.placeholder.com/150" class="card-img-top" alt="Event Image">
+      <div class="card-body">
+        <h5 class="card-title">{{ event.title }}</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Location: {{ event.location }}</li>
+          <li class="list-group-item">Date: {{ event.date | date }}</li>
+          <li class="list-group-item">Description: {{ event.description }}</li>
+          <li class="list-group-item">Capacity: {{ event.capacity }}</li>
+        </ul>
+        <button (click)="signUpForEvent(event.eventId)" class="btn btn-primary">Sign Up</button>
+      </div>
+    </div>
   </div>
-  <div *ngIf="!event">
-    <p>Loading event details...</p>
-  </div> -->

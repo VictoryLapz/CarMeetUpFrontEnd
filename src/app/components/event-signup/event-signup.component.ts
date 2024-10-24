@@ -31,7 +31,7 @@ export class EventSignupComponent implements OnInit {
     // });
 
     //Uncomment the following line to use a hardcoded user ID for testing:
-    this.userId = 5; // Hardcoded user ID for local testing
+    this.userId = 1; // Hardcoded user ID for local testing
     this.getUserEventSignUps(); // Fetch event sign-ups for the hardcoded user
   }
 
