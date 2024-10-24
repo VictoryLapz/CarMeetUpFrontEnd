@@ -1,1 +1,21 @@
-<p>car-details works!</p>
+<div class="car-management-page">
+  <div class="search-container">
+    <h2>Checkout our cars</h2>
+    <hr>
+  </div>
+
+  <div *ngIf="cars.length === 0" class="no-cars">NO CARS AVAILABLE.</div>
+
+  <div class="row" *ngIf="cars.length > 0">
+    <div class="col-md-4" *ngFor="let car of cars; let i = index">
+      <div class="card" style="width: 100%;">
+        <img [src]="randomImageUrls[i % randomImageUrls.length]" class="card-img-top" alt="Car Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ car.make }}</h5>
+          <p class="card-text">{{ car.model }}</p>
+          <p class="card-text"><strong>YEAR:</strong> {{ car.year }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

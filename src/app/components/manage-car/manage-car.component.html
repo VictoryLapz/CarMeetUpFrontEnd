@@ -1,0 +1,53 @@
+<div class="car-management-page">
+  <div class="search-container">
+    <h1 class="card-title">Car Management</h1>
+
+
+    <div class="form-group">
+      <label for="car-select" class="card-text">Select Car:</label>
+      <select class="form-control" id="car-select" (change)="onCarSelect($event)">
+        <option *ngFor="let car of cars" [value]="car.id">{{ car.make }} {{ car.model }} ({{ car.year }})</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <form [formGroup]="carForm" (ngSubmit)="updateCar()">
+        <div class="form-group">
+          <label for="make" class="card-text">Make</label>
+          <input formControlName="make" class="form-control" id="make" type="text" />
+        </div>
+
+        <div class="form-group">
+          <label for="model" class="card-text">Model</label>
+          <input formControlName="model" class="form-control" id="model" type="text" />
+        </div>
+
+        <div class="form-group">
+          <label for="year" class="card-text">Year</label>
+          <input formControlName="year" class="form-control" id="year" type="number" />
+        </div>
+
+        <div class="form-group">
+          <label for="class" class="card-text">Class</label>
+          <input formControlName="class" class="form-control" id="class" type="text" />
+        </div>
+
+        <div class="form-group">
+          <label for="fuelType" class="card-text">Fuel Type</label>
+          <input formControlName="fuelType" class="form-control" id="fuelType" type="text" />
+        </div>
+
+        <div class="form-group">
+          <label for="cylinders" class="card-text">Cylinders</label>
+          <input formControlName="cylinders" class="form-control" id="cylinders" type="number" />
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Update Car</button>
+          <button type="button" class="btn btn-danger" (click)="deleteCar()">Delete Car</button>
+          <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset Form</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

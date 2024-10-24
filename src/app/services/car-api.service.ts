@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Car } from '../models/car';
-import { environment } from '../../environments/enviornment.prod';
+import { environment } from '../../environments/environment.development';
 import { catchError } from 'rxjs';
 
 @Injectable({
@@ -19,14 +19,16 @@ export class CarApiService {
   }
 
   getCarById(id: number): Observable<Car> {
-    return this.httpClient.get<Car>(`${this.carUrl}/${id}`).pipe(catchError(this.handleError));
-  }
-
-  createCar(car: Omit<Car, 'Id'>): Observable<Car> {
-    return this.httpClient.post<Car>(`${this.carUrl}`, car).pipe(
+    return this.httpClient.get<Car>(`${this.carUrl}/byid/${id}`).pipe(
       catchError(this.handleError)
     );
   }
+
+  createCar(car: Car): Observable<Car> {
+    return this.httpClient.post<Car>(`${this.carUrl}`, car).pipe(
+      catchError(this.handleError)
+    );
+}
 
   updateCar(id: number, car: Car): Observable<void> {
     return this.httpClient.put<void>(`${this.carUrl}/${id}`, car).pipe(
@@ -44,6 +46,10 @@ export class CarApiService {
     return this.httpClient.get<Car[]>(`${this.carUrl}/external/${make}`).pipe(
       catchError(this.handleError)
     );
+  }
+
+  getCarMakes(): Observable<string[]> {
+    return this.httpClient.get<string[]>(`${this.carUrl}/CarMakes`);
   }
 
 
